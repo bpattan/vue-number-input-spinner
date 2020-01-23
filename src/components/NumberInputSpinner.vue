@@ -2,6 +2,7 @@
   <div class='vnis' >
     <button
         @click='decreaseNumber'
+		type="button"
         @mousedown='whileMouseDown(decreaseNumber)'
         @mouseup='clearTimer'
         :class='buttonClass'>-</button>
@@ -11,11 +12,13 @@
         @keypress='validateInput'
         @input='inputValue'
         :class='inputClass'
+		:style='-moz-appearance:textfield;'
         :min='min'
         :max='max'
         debounce='500'
     />
     <button
+        type="button"
         @click='increaseNumber'
         @mousedown='whileMouseDown(increaseNumber)'
         @mouseup='clearTimer'
